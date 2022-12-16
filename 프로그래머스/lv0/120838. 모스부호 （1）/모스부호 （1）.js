@@ -8,15 +8,9 @@ const morse = { '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
 function solution(letter) {
     let currentMorse = '';
     let answer = ''
-    for(let i = 0; i < letter.length; i++){
-        const item = letter[i]
-        if(item === ' '){
-            answer += morse[currentMorse]
-            currentMorse = ''
-        }else{
-            currentMorse += item
-        }
+    const splittedLetter = letter.split(' ')
+    for(let i= 0; i < splittedLetter.length; i++){
+        answer += morse[splittedLetter[i]]
     }
-    answer += morse[currentMorse]
     return answer;
 }
