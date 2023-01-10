@@ -1,3 +1,8 @@
+import sys 
+
+input = sys.stdin.readline
+
+
 a, b = map(int, input().split())
 
 for x in range(-1000,1001):
